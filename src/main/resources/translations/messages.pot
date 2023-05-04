@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-04 12:26+0000\n"
+"POT-Creation-Date: 2023-05-04 16:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,6 +38,18 @@ msgstr ""
 msgid ""
 "Spawn Location in your space is obstructed! To remove Blocks press Shift and "
 "right click this again"
+msgstr ""
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:231
+msgid "§4Put to Block Assigner"
+msgstr ""
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:289
+msgid "ERROR"
+msgstr ""
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:289
+msgid " NO ENERGY"
 msgstr ""
 
 #: main/java/me/CAPS123987/items/Items.java:20

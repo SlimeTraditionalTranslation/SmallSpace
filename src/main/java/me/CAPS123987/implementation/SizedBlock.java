@@ -228,8 +228,8 @@ public class SizedBlock extends SimpleSlimefunItem<BlockTicker> implements Energ
 				e.getBlock().getWorld().setChunkForceLoaded(e.getBlock().getLocation().getChunk().getX(), e.getBlock().getLocation().getChunk().getZ(), true);
 				// TODO Auto-generated method stub
 				BlockStorage.addBlockInfo(e.getBlock().getLocation(), "Tier", String.valueOf(getTier())) ;
-				if(e.getItemInHand().getItemMeta().getLore().get(0).equals("§4Put to Block Assigner")) {
-					BlockStorage.addBlockInfo(e.getBlock().getLocation(), "name","null");
+				if(e.getItemInHand().getItemMeta().getLore().get(0).equals(GetText.tr("§4Put to Block Assigner"))) {
+					e.setCancelled(true);
 					return;
 					}
 					BlockStorage.addBlockInfo(e.getBlock().getLocation(), "Players", "");
@@ -286,7 +286,7 @@ public class SizedBlock extends SimpleSlimefunItem<BlockTicker> implements Energ
 	        	for(Entity e : Entity) {
 	        		if(e instanceof Player) {
 	        			Player p = (Player) e;
-	        			p.sendMessage(ChatColor.MAGIC+"III"+ChatColor.RESET+ChatColor.DARK_RED+"ERROR"+ChatColor.RESET+ChatColor.MAGIC+"III"+ChatColor.RESET+ChatColor.WHITE+" NO ENERGY");
+	        			p.sendMessage(ChatColor.MAGIC+"III"+ChatColor.RESET+ChatColor.DARK_RED+GetText.tr("ERROR")+ChatColor.RESET+ChatColor.MAGIC+"III"+ChatColor.RESET+ChatColor.WHITE+GetText.tr(" NO ENERGY"));
 	        			p.setHealth(0.0);
 	        			
 	        		}
