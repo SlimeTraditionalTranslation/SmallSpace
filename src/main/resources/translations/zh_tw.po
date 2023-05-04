@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-04 12:26+0000\n"
-"PO-Revision-Date: 2023-05-05 00:28+0800\n"
+"POT-Creation-Date: 2023-05-04 17:28+0000\n"
+"PO-Revision-Date: 2023-05-05 02:22+0800\n"
 "Last-Translator: Efina\n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -40,15 +40,20 @@ msgid ""
 "right click this again"
 msgstr "你的空間重生點已被阻礙！Shift + 右鍵點此方塊將阻礙方塊移除"
 
+# 不能用正常的顏色代碼，那將導致它無法正確判斷到
 #: main/java/me/CAPS123987/implementation/SizedBlock.java:231
 msgid "§4Put to Block Assigner"
-msgstr "&4放入方塊分配器"
+msgstr "§4放入方塊分配器"
 
-#: main/java/me/CAPS123987/implementation/SizedBlock.java:289
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:234
+msgid "You need to put this block to Block Block Assigner"
+msgstr "你需要將此方塊放到方塊分配器中"
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:291
 msgid "ERROR"
 msgstr "錯誤"
 
-#: main/java/me/CAPS123987/implementation/SizedBlock.java:289
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:291
 msgid " NO ENERGY"
 msgstr " 沒有能量"
 
@@ -65,7 +70,7 @@ msgstr "&r空間方塊&7（等級一｜3x3）"
 #: main/java/me/CAPS123987/items/Items.java:37
 #: main/java/me/CAPS123987/items/Items.java:43
 msgid "&l§4Put to Block Assigner"
-msgstr "&l&4放入方塊分配器"
+msgstr "&4放入方塊分配器"
 
 #: main/java/me/CAPS123987/items/Items.java:30
 msgid "&rSized Block &7(Tier 2 6x6)"

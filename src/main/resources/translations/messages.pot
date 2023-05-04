@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-04 16:24+0000\n"
+"POT-Creation-Date: 2023-05-04 17:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,11 +44,15 @@ msgstr ""
 msgid "§4Put to Block Assigner"
 msgstr ""
 
-#: main/java/me/CAPS123987/implementation/SizedBlock.java:289
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:234
+msgid "You need to put this block to Block Block Assigner"
+msgstr ""
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:291
 msgid "ERROR"
 msgstr ""
 
-#: main/java/me/CAPS123987/implementation/SizedBlock.java:289
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:291
 msgid " NO ENERGY"
 msgstr ""
 
