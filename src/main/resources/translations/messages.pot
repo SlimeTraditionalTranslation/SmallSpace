@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 12:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:105
+msgid "You are not the owner or member of this space!"
+msgstr ""
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:111
+msgid "Your space was never initialized try right click"
+msgstr ""
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:115
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:153
+msgid "Sorry your space is disabled"
+msgstr ""
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:122
+msgid "Blocks were removed"
+msgstr ""
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:162
+msgid ""
+"Spawn Location in your space is obstructed! To remove Blocks press Shift and "
+"right click this again"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:20
+msgid "&aSmall Space"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:24
+msgid "&rSized Block &7(Tier 1 3x3)"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:25
+#: main/java/me/CAPS123987/items/Items.java:31
+#: main/java/me/CAPS123987/items/Items.java:37
+#: main/java/me/CAPS123987/items/Items.java:43
+msgid "&l§4Put to Block Assigner"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:30
+msgid "&rSized Block &7(Tier 2 6x6)"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:36
+msgid "&rSized Block &7(Tier 3 9x9)"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:42
+msgid "&rSized Block &7(Tier 4 12x12)"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:54
+msgid "&rBlock Assigner"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:55
+msgid "&7Put Sized Block in this machine to assign custom id"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:64
+msgid "&rSpace Stabilizer"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:65
+msgid "&7Stabilizes space in block - main part"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:86
+msgid "&rSpace Interface"
+msgstr ""
+
+#: main/java/me/CAPS123987/items/Items.java:87
+msgid "&7(way to push items in and out of the space)"
+msgstr ""
+
+#: main/java/me/CAPS123987/machines/BlockAssigner.java:80
+msgid "Put to Block Assigner"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:163
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:187
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:206
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:225
+msgid "No permition"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:171
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:194
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:213
+msgid "Please enter Id of space"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:237
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:298
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:338
+msgid "this block doesn't have BlockStorage data"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:241
+msgid "this block is not teleporter"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:270
+msgid "Unknown command"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:280
+msgid "Space is not initialized yet"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:288
+msgid "You must by Player to use this command"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:304
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:344
+msgid "this block is not SIZED BLOCK"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:309
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:349
+msgid "You are not owner of this block"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:325
+#, java-format
+msgid "Player {0} added"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:368
+#, java-format
+msgid "Player {0} removed"
+msgstr ""
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:372
+#, java-format
+msgid "Player {0} isn't registered in this block"
+msgstr ""

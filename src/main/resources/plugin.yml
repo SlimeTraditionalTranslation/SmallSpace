@@ -5,7 +5,7 @@ name: SmallSpace
 author: CAPS123987
 
 ## CHANGE this to a meaninful but short description of your plugin.
-description: A Slimefun4-Addon called SmallSpace
+description: 黏液科技附加「迷你空間」繁體中文版。
 
 ## CHANGE this to the path of the class that extends JavaPlugin.
 main: me.CAPS123987.smallspace.SmallSpace

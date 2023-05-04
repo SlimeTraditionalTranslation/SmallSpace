@@ -2,9 +2,12 @@ package me.CAPS123987.smallspace;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
+import java.util.Locale;
 import java.util.logging.Logger;
 
+import org.antlr.v4.runtime.misc.ParseCancellationException;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -31,7 +34,7 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
+import io.github.bakedlibs.dough.updater.GitHubBuildsUpdaterTR;
 import me.CAPS123987.cargo.SpaceInterface;
 import me.CAPS123987.cargo.ExportBus;
 import me.CAPS123987.cargo.ImportBus;
@@ -43,6 +46,8 @@ import me.CAPS123987.machines.BlockAssigner;
 import me.CAPS123987.tabCompleater.*;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
+import org.mini2Dx.gettext.GetText;
+import org.mini2Dx.gettext.PoFile;
 
 
 public class SmallSpace extends JavaPlugin implements SlimefunAddon {
@@ -51,23 +56,41 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
     @Override
     public void onEnable() {
     	
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
+        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("EFI - ")) {
         	
-        	GitHubBuildsUpdater
+        	GitHubBuildsUpdaterTR
         	updater 
         	= 
-        	new GitHubBuildsUpdater(
+        	new GitHubBuildsUpdaterTR(
         			this
         			, this.getFile()
-        			, "CAPS123987/SmallSpace/master");
+        			, "SlimeTraditionalTranslation/SmallSpace/master");
         	
         	updater.start();
         	
         }
     	
     	instance = this;
-    	
-    	getCommand("SmallSpace").setTabCompleter(new TabC());
+
+		GetText.setLocale(Locale.TRADITIONAL_CHINESE);
+		InputStream inputStream = getClass().getResourceAsStream("/translations/zh_tw.po");
+		if (inputStream == null) {
+			getLogger().severe("錯誤！無法找到翻譯檔案，請回報給翻譯者。");
+			getServer().getPluginManager().disablePlugin(this);
+			return;
+		} else {
+			getLogger().info("載入繁體翻譯檔案...");
+			try {
+				PoFile poFile = new PoFile(Locale.TRADITIONAL_CHINESE, inputStream);
+				GetText.add(poFile);
+			} catch (ParseCancellationException | IOException e) {
+				getLogger().severe("錯誤！讀取翻譯時發生錯誤，請回報給翻譯者：" + e.getMessage());
+				getServer().getPluginManager().disablePlugin(this);
+				return;
+			}
+		}
+
+		getCommand("SmallSpace").setTabCompleter(new TabC());
         //setup dimension 
         WorldCreator worldCreator = new WorldCreator("SmallSpace");
         worldCreator.generator(new SmallSpaceDim());
@@ -137,7 +160,7 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
     	
 	    	case "tptoId":
 	    		if (!p.hasPermission("SmallSpace.admin")) {
-	        		p.sendMessage(ChatColor.RED+"No permition");
+	        		p.sendMessage(ChatColor.RED+GetText.tr("No permition"));
 	        		return false;
 	        	}
 	    		if(p instanceof Player) {
@@ -145,7 +168,7 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
 		    			String id = args[1];
 		    			int value = Integer.parseInt(id.replaceAll("[^0-9]", ""));
 		    			}catch(Exception e) {
-		    			p.sendMessage("Please enter Id of space");
+		    			p.sendMessage(GetText.tr("Please enter Id of space"));
 		    			return true;
 		    		}
 		    		String id = args[1];
@@ -161,14 +184,14 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
 	    		
 	    	case "blockId":
 	    		if (!p.hasPermission("SmallSpace.admin")) {
-	        		p.sendMessage(ChatColor.RED+"No permition");
+	        		p.sendMessage(ChatColor.RED+GetText.tr("No permition"));
 	        		return false;
 	        	}
 	    		try {
 	    			String id1 = args[1];
 	    			int value1 = Integer.parseInt(id1.replaceAll("[^0-9]", ""));
 	    			}catch(Exception e) {
-	    			p.sendMessage("Please enter Id of space");
+	    			p.sendMessage(GetText.tr("Please enter Id of space"));
 	    			return true;
 	    		}
 	    		String id1 = args[1];
@@ -180,14 +203,14 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
 	    		
 	    	case "unblockId":
 	    		if (!p.hasPermission("SmallSpace.admin")) {
-	        		p.sendMessage(ChatColor.RED+"No permition");
+	        		p.sendMessage(ChatColor.RED+GetText.tr("No permition"));
 	        		return false;
 	        	}
 	    		try {
 	    			String id2 = args[1];
 	    			int value2 = Integer.parseInt(id2.replaceAll("[^0-9]", ""));
 	    			}catch(Exception e) {
-	    			p.sendMessage("Please enter Id of space");
+	    			p.sendMessage(GetText.tr("Please enter Id of space"));
 	    			return true;
 	    		}
 	    		String id2 = args[1];
@@ -199,7 +222,7 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
 	    		
 	    	case "teleportRemove":
 	    		if (!p.hasPermission("SmallSpace.admin")) {
-	        		p.sendMessage(ChatColor.RED+"No permition");
+	        		p.sendMessage(ChatColor.RED+GetText.tr("No permition"));
 	        		return false;
 	        	}
 	    		if(!(p instanceof Player)) {
@@ -211,11 +234,11 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
 	    		pp = (Player) p;
 	    		Block b =pp.getTargetBlockExact(20);
 	    		if(!BlockStorage.hasBlockInfo(b)) {
-	    			p.sendMessage("this block doesn't have BlockStorage data");
+	    			p.sendMessage(GetText.tr("this block doesn't have BlockStorage data"));
 	    			return true;
 	    		}
 	    		if(!BlockStorage.getLocationInfo(b.getLocation(),"id").equals("TELEPORT")) {
-	    			p.sendMessage("this block is not teleporter");
+	    			p.sendMessage(GetText.tr("this block is not teleporter"));
 	    			return true;
 	    		}
 	    		BlockStorage.clearBlockInfo(b);
@@ -244,7 +267,7 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
 		    		return true;
 	    	
 	    	default:
-	    		p.sendMessage("Unknown command");
+	    		p.sendMessage(GetText.tr("Unknown command"));
     	}
     	
     	return true;
@@ -254,7 +277,7 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
     	World world = Bukkit.getWorld("SmallSpace");
     	Location newloc2 = new Location(world,l.getX()+0.5,l.getY()+1,l.getZ()+0.5);
     	if(newloc2.getBlock().getType()==Material.BEDROCK) {
-    		p.sendMessage("Space is not initialized yet");
+    		p.sendMessage(GetText.tr("Space is not initialized yet"));
     		return;
     	}
     	Player p2 = (Player) p;
@@ -262,7 +285,7 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
     	
     }
     public void notSeder(CommandSender p) {
-    	p.sendMessage("You must by Player to use this command");
+    	p.sendMessage(GetText.tr("You must by Player to use this command"));
     }
     
     
@@ -272,18 +295,18 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
     	final Player pp = (Player) p;
 		Block b =pp.getTargetBlockExact(20);
 		if(!BlockStorage.hasBlockInfo(b)) {
-			p.sendMessage("this block doesn't have BlockStorage data");
+			p.sendMessage(GetText.tr("this block doesn't have BlockStorage data"));
 			return false;
 		}
 
 		SlimefunItem item = BlockStorage.check(b);
 		if (!(item instanceof SizedBlock)) {
-			p.sendMessage("this block is not SIZED BLOCK");
+			p.sendMessage(GetText.tr("this block is not SIZED BLOCK"));
 			return false;
 		}
 		
 		if(!(BlockStorage.getLocationInfo(b.getLocation(),"owner").equals(pp.getName())) && !p.hasPermission("SmallSpace.admin")) {
-			pp.sendMessage("You are not owner of this block");
+			pp.sendMessage(GetText.tr("You are not owner of this block"));
 			return false;
 		}
 		
@@ -299,7 +322,7 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
 		}else {
 			BlockStorage.addBlockInfo(b, "Players",old + args[1] + ";");
     	}
-		pp.sendMessage("Player "+args[1]+" added");
+		pp.sendMessage(GetText.tr("Player {0} added", args[1]));
 		return true;
 		
 		
@@ -312,18 +335,18 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
     	final Player pp = (Player) p;
 		Block b =pp.getTargetBlockExact(20);
 		if(!BlockStorage.hasBlockInfo(b)) {
-			p.sendMessage("this block doesn't have BlockStorage data");
+			p.sendMessage(GetText.tr("this block doesn't have BlockStorage data"));
 			return false;
 		}
 		
 		SlimefunItem item = BlockStorage.check(b);
 		if (!(item instanceof SizedBlock)) {
-			p.sendMessage("this block is not SIZED BLOCK");
+			p.sendMessage(GetText.tr("this block is not SIZED BLOCK"));
 			return false;
 		}
 		
 		if(!(BlockStorage.getLocationInfo(b.getLocation(),"owner").equals(pp.getName())) && !p.hasPermission("SmallSpace.admin")) {
-			pp.sendMessage("You are not owner of this block");
+			pp.sendMessage(GetText.tr("You are not owner of this block"));
 			return false;
 		}
 		
@@ -342,11 +365,11 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
 				
 			}
 			BlockStorage.addBlockInfo(b, "Players", text);
-			pp.sendMessage("Player "+args[1]+" removed");
+			pp.sendMessage(GetText.tr("Player {0} removed", args[1]));
 			
 			return true;
 		}else {
-			pp.sendMessage("Player "+args[1]+" isn't registered in this block");
+			pp.sendMessage(GetText.tr("Player {0} isn't registered in this block", args[1]));
 			return false;
 		}
 		

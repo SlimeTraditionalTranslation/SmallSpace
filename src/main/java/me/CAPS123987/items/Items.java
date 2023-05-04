@@ -12,34 +12,35 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import me.CAPS123987.smallspace.*;
+import org.mini2Dx.gettext.GetText;
 
 public class Items {
 	public static final ItemGroup smallSpace = new ItemGroup(new NamespacedKey(SmallSpace.getInstance(),
 	        "Small_Space"),
-	        new CustomItemStack(Material.TUFF, "&aSmall Space")
+	        new CustomItemStack(Material.TUFF, GetText.tr("&aSmall Space"))
 	    );
 	public static final SlimefunItemStack SIZED_BLOCK1 = new SlimefunItemStack("SIZED_BLOCK1",
 			Material.DEEPSLATE_COAL_ORE,
-	        "&rSized Block &7(Tier 1 3x3)",
-	        "&l§4Put to Block Assigner",
+			GetText.tr("&rSized Block &7(Tier 1 3x3)"),
+			GetText.tr("&l§4Put to Block Assigner"),
 	        LoreBuilder.powerPerSecond(256)
 	    );
 	public static final SlimefunItemStack SIZED_BLOCK2 = new SlimefunItemStack("SIZED_BLOCK2",
 	        Material.DEEPSLATE_COAL_ORE,
-	        "&rSized Block &7(Tier 2 6x6)",
-	        "&l§4Put to Block Assigner",
+			GetText.tr("&rSized Block &7(Tier 2 6x6)"),
+			GetText.tr("&l§4Put to Block Assigner"),
 	        LoreBuilder.powerPerSecond(512)
 	    );
 	public static final SlimefunItemStack SIZED_BLOCK3 = new SlimefunItemStack("SIZED_BLOCK3",
 			Material.DEEPSLATE_COAL_ORE,
-	        "&rSized Block &7(Tier 3 9x9)",
-	        "&l§4Put to Block Assigner",
+	        GetText.tr("&rSized Block &7(Tier 3 9x9)"),
+			GetText.tr("&l§4Put to Block Assigner"),
 	        LoreBuilder.powerPerSecond(768)
 	    );
 	public static final SlimefunItemStack SIZED_BLOCK4 = new SlimefunItemStack("SIZED_BLOCK4",
 			Material.DEEPSLATE_COAL_ORE,
-	        "&rSized Block &7(Tier 4 12x12)",
-	        "&l§4Put to Block Assigner",
+			GetText.tr("&rSized Block &7(Tier 4 12x12)"),
+			GetText.tr("&l§4Put to Block Assigner"),
 	        LoreBuilder.powerPerSecond(1024)
 	    );
 	public static final SlimefunItemStack TELEPORT = new SlimefunItemStack("TELEPORT",
@@ -50,8 +51,8 @@ public class Items {
 	
 	public static final SlimefunItemStack BLOCK_ASSIGNER = new SlimefunItemStack("BLOCK_ASSIGNER",
 	        Material.DIAMOND_BLOCK,
-	        "&rBlock Assigner",
-	        "&7Put Sized Block in this machine to assign custom id",
+			GetText.tr("&rBlock Assigner"),
+			GetText.tr("&7Put Sized Block in this machine to assign custom id"),
 	        LoreBuilder.machine(MachineTier.AVERAGE, MachineType.MACHINE),
 	        LoreBuilder.powerPerSecond(12),
 	        LoreBuilder.powerBuffer(512)
@@ -60,8 +61,8 @@ public class Items {
 	
 	public static final SlimefunItemStack SPACE_STABILIZER = new SlimefunItemStack("SPACE_STABILIZER",
 	        Material.BLACK_WOOL,
-	        "&rSpace Stabilizer",
-	        "&7Stabilizes space in block - main part",
+			GetText.tr("&rSpace Stabilizer"),
+			GetText.tr("&7Stabilizes space in block - main part"),
 	        LoreBuilder.machine(MachineTier.AVERAGE, MachineType.MACHINE),
 	        LoreBuilder.powerPerSecond(12),
 	        LoreBuilder.powerBuffer(512)
@@ -82,8 +83,8 @@ public class Items {
 	public static final SlimefunItemStack SPACE_INTERFACE = new SlimefunItemStack("SPACE_INTERFACE",
 			//https://minecraft-heads.com/custom-heads/miscellaneous/57245-file-explorer
 			"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzczZThiZDNjNDNjNDUxNGM3NjQ4MWNhMWRhZjU1MTQ5ZGZjOTNiZDFiY2ZhOGFiOTQzN2I5ZjdlYjMzOTJkOSJ9fX0=",
-	        "&rSpace Interface",
-	        "&7(way to push items in and out of the space)",
+			GetText.tr("&rSpace Interface"),
+			GetText.tr("&7(way to push items in and out of the space)"),
 	        LoreBuilder.machine(MachineTier.AVERAGE, MachineType.MACHINE),
 	        LoreBuilder.powerPerSecond(12),
 	        LoreBuilder.powerBuffer(512)

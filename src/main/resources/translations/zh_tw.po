@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-04 12:26+0000\n"
+"PO-Revision-Date: 2023-05-04 22:13+0800\n"
+"Last-Translator: Efina\n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:105
+msgid "You are not the owner or member of this space!"
+msgstr "你不是此空間的擁有者或成員"
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:111
+msgid "Your space was never initialized try right click"
+msgstr "你的空間從未被初始化，嘗試右鍵進行初始化"
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:115
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:153
+msgid "Sorry your space is disabled"
+msgstr "抱歉，你的空間已被停用"
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:122
+msgid "Blocks were removed"
+msgstr "方塊已被移除"
+
+#: main/java/me/CAPS123987/implementation/SizedBlock.java:162
+msgid ""
+"Spawn Location in your space is obstructed! To remove Blocks press Shift and "
+"right click this again"
+msgstr "你的空間重生點已被阻礙！Shift + 右鍵點此方塊將阻礙方塊移除"
+
+#: main/java/me/CAPS123987/items/Items.java:20
+msgid "&aSmall Space"
+msgstr "&a迷你空間"
+
+#: main/java/me/CAPS123987/items/Items.java:24
+msgid "&rSized Block &7(Tier 1 3x3)"
+msgstr "&r空間方塊&7（等級一｜3x3）"
+
+#: main/java/me/CAPS123987/items/Items.java:25
+#: main/java/me/CAPS123987/items/Items.java:31
+#: main/java/me/CAPS123987/items/Items.java:37
+#: main/java/me/CAPS123987/items/Items.java:43
+msgid "&l§4Put to Block Assigner"
+msgstr "&l&4放入方塊分配器"
+
+#: main/java/me/CAPS123987/items/Items.java:30
+msgid "&rSized Block &7(Tier 2 6x6)"
+msgstr "&r空間方塊&7（等級二｜6x6）"
+
+#: main/java/me/CAPS123987/items/Items.java:36
+msgid "&rSized Block &7(Tier 3 9x9)"
+msgstr "&r空間方塊&7（等級三｜9x9）"
+
+#: main/java/me/CAPS123987/items/Items.java:42
+msgid "&rSized Block &7(Tier 4 12x12)"
+msgstr "&r空間方塊&7（等級四｜12x12）"
+
+#: main/java/me/CAPS123987/items/Items.java:54
+msgid "&rBlock Assigner"
+msgstr "&r方塊分配器"
+
+#: main/java/me/CAPS123987/items/Items.java:55
+msgid "&7Put Sized Block in this machine to assign custom id"
+msgstr "&7將空間方塊放入此機器中來分配自訂 ID"
+
+#: main/java/me/CAPS123987/items/Items.java:64
+msgid "&rSpace Stabilizer"
+msgstr "&r空間穩定器"
+
+#: main/java/me/CAPS123987/items/Items.java:65
+msgid "&7Stabilizes space in block - main part"
+msgstr "&7穩定空間的方塊 - 主要部件"
+
+#: main/java/me/CAPS123987/items/Items.java:86
+msgid "&rSpace Interface"
+msgstr "&r空間介面"
+
+#: main/java/me/CAPS123987/items/Items.java:87
+msgid "&7(way to push items in and out of the space)"
+msgstr "&7（一種能將物品推入推出空間的介面）"
+
+#: main/java/me/CAPS123987/machines/BlockAssigner.java:80
+msgid "Put to Block Assigner"
+msgstr "放入方塊分配器"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:163
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:187
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:206
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:225
+msgid "No permition"
+msgstr "沒有權限"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:171
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:194
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:213
+msgid "Please enter Id of space"
+msgstr "請輸入空間的 ID"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:237
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:298
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:338
+msgid "this block doesn't have BlockStorage data"
+msgstr "這個方塊並未包含 BlockStorage 資料"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:241
+msgid "this block is not teleporter"
+msgstr "這個方塊不是傳送器"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:270
+msgid "Unknown command"
+msgstr "未知指令"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:280
+msgid "Space is not initialized yet"
+msgstr "空間還未被初始化"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:288
+msgid "You must by Player to use this command"
+msgstr "你必須是玩家才能使用此指令"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:304
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:344
+msgid "this block is not SIZED BLOCK"
+msgstr "這個方塊不是「空間方塊」"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:309
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:349
+msgid "You are not owner of this block"
+msgstr "你不是此方塊的擁有者"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:325
+#, java-format
+msgid "Player {0} added"
+msgstr "玩家 {0} 已新增"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:368
+#, java-format
+msgid "Player {0} removed"
+msgstr "玩家 {0} 已移除"
+
+#: main/java/me/CAPS123987/smallspace/SmallSpace.java:372
+#, java-format
+msgid "Player {0} isn't registered in this block"
+msgstr "玩家 {0} 並未註冊在此方塊"

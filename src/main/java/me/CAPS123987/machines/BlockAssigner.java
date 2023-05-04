@@ -36,6 +36,7 @@ import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
+import org.mini2Dx.gettext.GetText;
 
 public class BlockAssigner extends SimpleSlimefunItem<BlockTicker> implements ETInventoryBlock,
 EnergyNetComponent{
@@ -76,7 +77,7 @@ EnergyNetComponent{
         		ItemMeta meta = menu.getItemInSlot(20).getItemMeta();
         		List<String> lore = new ArrayList<String>();
         		
-        		if(!meta.getLore().get(0).contains("Put to Block Assigner")) {return;}
+        		if(!meta.getLore().get(0).contains(GetText.tr("Put to Block Assigner"))) {return;}
         		if(menu.getItemInSlot(24)==null){
 	        		long max = cfg.getLong("max");
 	        		lore.add(String.valueOf(max));

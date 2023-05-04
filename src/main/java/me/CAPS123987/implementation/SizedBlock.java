@@ -47,6 +47,7 @@ import io.github.thebusybiscuit.slimefun4.api.events.PlayerRightClickEvent;
 import org.bukkit.event.player.PlayerEvent;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
 import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
+import org.mini2Dx.gettext.GetText;
 
 public class SizedBlock extends SimpleSlimefunItem<BlockTicker> implements EnergyNetComponent{
 	private final int Tier;
@@ -101,24 +102,24 @@ public class SizedBlock extends SimpleSlimefunItem<BlockTicker> implements Energ
 				Location newloc3 = new Location(world,loc.getX()+0.5,loc.getY()-1,loc.getZ()+0.5);
 				
 				if(!(e.getPlayer().getName().equals(owner)|| e.getPlayer().hasPermission("SmallSpace.admin") || Calculator.playersGet(BlockStorage.getLocationInfo(e.getClickedBlock().get().getLocation(), "Players")).contains(e.getPlayer().getName()))) {
-					e.getPlayer().sendMessage(ChatColor.RED+"You are not the owner or member of this space!");
+					e.getPlayer().sendMessage(ChatColor.RED+ GetText.tr("You are not the owner or member of this space!"));
 					return;
 				}
 				
 				if(e.getPlayer().isSneaking()) {
 					if(loc.getBlock().getType() == Material.BEDROCK) {
-						e.getPlayer().sendMessage(ChatColor.RED+"Your space was never initialized try right click");
+						e.getPlayer().sendMessage(ChatColor.RED+GetText.tr("Your space was never initialized try right click"));
 						return;
 					}
 					if(loc.getBlock().getType() == Material.BARRIER) {
-						e.getPlayer().sendMessage(ChatColor.DARK_RED+"Sorry your space is disabled");
+						e.getPlayer().sendMessage(ChatColor.DARK_RED+GetText.tr("Sorry your space is disabled"));
 						return;
 					}
 					
 					newloc2.getBlock().setType(Material.AIR);
 					newloc22.getBlock().setType(Material.AIR);
 					newloc222.getBlock().setType(Material.AIR);
-					e.getPlayer().sendMessage("Blocks were removed");
+					e.getPlayer().sendMessage(GetText.tr("Blocks were removed"));
 				}else {
 					if(loc.getBlock().getType() == Material.BEDROCK) {
 						switch(value) {
@@ -149,7 +150,7 @@ public class SizedBlock extends SimpleSlimefunItem<BlockTicker> implements Energ
 					}
 					
 					if(newloc.getBlock().getType()==Material.BARRIER) {
-						e.getPlayer().sendMessage(ChatColor.DARK_RED+"Sorry your space is disabled");
+						e.getPlayer().sendMessage(ChatColor.DARK_RED+GetText.tr("Sorry your space is disabled"));
 						return;
 					}
 					if(newloc2.getBlock().getType()==Material.AIR && newloc22.getBlock().getType()==Material.AIR&& newloc222.getBlock().getType()==Material.AIR) {
@@ -158,7 +159,7 @@ public class SizedBlock extends SimpleSlimefunItem<BlockTicker> implements Energ
 						e.getPlayer().teleport(newloc);
 						
 					}else {
-						e.getPlayer().sendMessage(ChatColor.RED+"Spawn Location in your space is obstructed! To remove Blocks press Shift and right click this again");
+						e.getPlayer().sendMessage(ChatColor.RED+GetText.tr("Spawn Location in your space is obstructed! To remove Blocks press Shift and right click this again"));
 						return;
 					}
 					
