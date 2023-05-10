@@ -290,13 +290,13 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon {
     	p.sendMessage(GetText.tr("You must by Player to use this command"));
     }
     public void help(CommandSender p) {
-    	p.sendMessage(ChatColor.GOLD+"memberAdd: "+ChatColor.WHITE+"This command adds Players to your Space(to use you need to look on Sized Block)");
-    	p.sendMessage(ChatColor.GOLD+"memberRemove: "+ChatColor.WHITE+"This command removes Players to your Space(to use you need to look on Sized Block)");
-    	p.sendMessage(ChatColor.GOLD+"help: "+ChatColor.WHITE+"This command displaies help list");
-    	p.sendMessage(ChatColor.GOLD+"tptoId: "+ChatColor.WHITE+"This command teleports you to Space with given id");
-    	p.sendMessage(ChatColor.GOLD+"blockId: "+ChatColor.WHITE+"This command blocks Space with given id");
-    	p.sendMessage(ChatColor.GOLD+"unblockId: "+ChatColor.WHITE+"This command unblocks Space with given id");
-    	p.sendMessage(ChatColor.GOLD+"teleportRemove: "+ChatColor.WHITE+"This command removes teleporter block(to use you need to look on TELEPORTER block)");
+    	p.sendMessage(ChatColor.GOLD+GetText.tr("memberAdd: ")+ChatColor.WHITE+GetText.tr("This command adds Players to your Space(to use you need to look on Sized Block)"));
+    	p.sendMessage(ChatColor.GOLD+GetText.tr("memberRemove: ")+ChatColor.WHITE+GetText.tr("This command removes Players to your Space(to use you need to look on Sized Block)"));
+    	p.sendMessage(ChatColor.GOLD+GetText.tr("help: ")+ChatColor.WHITE+GetText.tr("This command displaies help list"));
+    	p.sendMessage(ChatColor.GOLD+GetText.tr("tptoId: ")+ChatColor.WHITE+GetText.tr("This command teleports you to Space with given id"));
+    	p.sendMessage(ChatColor.GOLD+GetText.tr("blockId: ")+ChatColor.WHITE+GetText.tr("This command blocks Space with given id"));
+    	p.sendMessage(ChatColor.GOLD+GetText.tr("unblockId: ")+ChatColor.WHITE+GetText.tr("This command unblocks Space with given id"));
+    	p.sendMessage(ChatColor.GOLD+GetText.tr("teleportRemove: ")+ChatColor.WHITE+GetText.tr("This command removes teleporter block(to use you need to look on TELEPORTER block)"));
     	
     }
     
