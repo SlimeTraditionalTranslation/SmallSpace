@@ -17,6 +17,10 @@
 - 你可以對其貼上增加 [空間介面](#空間介面) 來存取輸入、輸出匯流排
 [如何使用](#如何使用空間方塊)
 
+
+或是教學：
+[![Tutorial](https://img.youtube.com/vi/5LTrYCd4nIY/0.jpg)](https://www.youtube.com/watch?v=5LTrYCd4nIY)
+
 <p align="center"><img alt="image" src="https://user-images.githubusercontent.com/87692752/236265631-a567832a-84bb-4d10-b0a4-26d4f912b883.png"></p>
 <p align="center"><img alt="image" src="https://user-images.githubusercontent.com/87692752/236265512-962f7c97-5d6b-4e88-a567-eed3fc1f2e80.png"></p>
 
