@@ -25,6 +25,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.player.PlayerTeleportEvent;
+import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -152,10 +154,21 @@ public class SmallSpace extends JavaPlugin implements SlimefunAddon, Listener {
     }
     
     @EventHandler
-    public void blockPlace(BlockBreakEvent e) {
+    public void playerTeleportEvent(PlayerTeleportEvent e) {
+    	TeleportCause tp = e.getCause();
+    	String world = e.getFrom().getWorld().getName();
+    	if(tp==TeleportCause.CHORUS_FRUIT&&world.equals("SmallSpace")) {
+    		e.setCancelled(true);
+    	}
+    	if(tp==TeleportCause.ENDER_PEARL&&world.equals("SmallSpace")) {
+    		e.setCancelled(true);
+    	}
+    }
+    @EventHandler
+    public void blockBreak(BlockBreakEvent e) {
     	Material m = e.getBlock().getType();
     	String name = e.getBlock().getWorld().getName();
-    	if(m==Material.BEDROCK&&name.equals("SmallSpace")) {
+    	if(m==Material.BEDROCK&&name.equals("SmallSpace")&&!e.getPlayer().hasPermission("SmallSpace.admin")) {
     		e.setCancelled(true);
     	}
     	
